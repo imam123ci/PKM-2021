@@ -18,5 +18,5 @@ def satu():
 def dua(userid):
     # predict buzzer her
     # set likelihood of being buzzer
-    # return following prediction
-    return "{} : nilaibuzzer".format(userid)
+    # return following prediction\
+    return "{} : buzzer".format(userid)
