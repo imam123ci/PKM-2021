@@ -1,0 +1,76 @@
+{% extends 'fe/base_other.html' %}
+
+{% block main %}
+        <div class="my-5"></div>
+        <div class="card">
+            <div class="card-body">
+                <h2> Anti-Buzzer API</h2>
+            </div>
+        </div>
+        <div class="my-2"></div>
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h3>Twitter</h3>
+            </div>
+            <div class="card-body">
+                <p>Pada saat ini, hanya tersedia data dari twitter. Namun, dikarenakan kebijakan penggunaan data dari twitter, penggunaan API ini terbatas pada 100.000 pemanggilan kumulatif. 
+                    Kebihkan ini dapat membuat API bisa saja tidak beroperasi sewaktu-waktu. API anti buzzer dari data twitter menerima input berita screen name / id akun twitter. Setelah itu, API akan mengembalikan nilai probabilatas buzzer dari akun tersebut.
+                    Apabila terjadi kesalahan, api akan mengembalikan nilai kosong tanpa ada perubahan kode.
+                </p>
+
+                <h4>URL <span class="badge badge-primary">GET, POST</span></h4>
+                <div class="code-box">
+                    <code class="p-2">
+                        /api/buzzer
+                    </code>    
+                </div>
+
+                <h4>Parameters</h4>
+                <table class="table table-responsive">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Wajib</th>
+                        <th scope="col">Nilai</th>
+                        <th scope="col">Deskripsi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <td scope="col"> 1 </td>
+                        <td scope="col"> screnname </td>
+                        <td scope="col"> wajib </td>
+                        <td scope="col"> - </td>
+                        <td scope="col"> Id akun twitter atau nama pengguna. Id akun twitter akan menjadi prioritas jika terdapat dua akun dengan nama yang sama. Jangan menggunakan tanda @ sebelum mengisi akun twitter. </td>
+
+                    </tbody>
+                </table>
+                <br>
+                <h4>Results </h4>
+                <table class="table table-responsive">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Tipe</th>
+                        <th scope="col">Deskripsi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <td scope="col"> 1 </td>
+                        <td scope="col"> screnname </td>
+                        <td scope="col"> string </td>
+                        <td scope="col"> Id akun twitter atau nama pengguna yang dikirimkan. </td>
+                    </tbody>
+                    <tbody>
+                        <td scope="col"> 2 </td>
+                        <td scope="col"> prob </td>
+                        <td scope="col"> float </td>
+                        <td scope="col"> Probabilitas jika akun adalah buzzer </td>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+{% endblock %}

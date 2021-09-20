@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+        <title>Hello, world!</title>
+
+        <style>
+            .body-regular{
+                background-color: #d3d3d3;
+            }
+            .body-main{
+                text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+                box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+            }
+            .code-box{
+                background-color:#f3f3f3; 
+                width:fit-content;
+                color: gray;
+                
+            }
+
+            .cover-container {
+                max-width: 42em;
+            }
+
+            .nav-masthead .nav-link {
+                align-items: center;
+                font-weight: 700;
+                color: rgba(255, 255, 255, .5);
+                background-color: transparent;
+                border-bottom: .25rem solid transparent;
+            }
+
+            .nav-masthead .active {
+                color: #fff;
+                border-bottom-color: #fff;
+            }
+        </style>
+    </head>
+    <body class="h-100">
+        {% block body %}{% endblock %}
+    </body>
+</html>
